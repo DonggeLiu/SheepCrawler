@@ -26,8 +26,8 @@ def zhuaYang():
 
 
 def pick(soup, i):
-	# 236: 猫工厂， 486: 粤品烧鹅, 664: 德恒楼, 319: 九姑娘酸菜鱼, 672: 快乐的鱼
-	if i in [236, 486, 664, 319, 672]:
+	# Place the ids of shops that you are not interested in [] below
+	if i in [9999,9998]:
 		print("ID = "  + str(i) + ': Not Interested')
 		return False
 
@@ -54,9 +54,8 @@ def Yang(soup):
 	commodityGoodscategoryIdContent = str(commodityGoodscategoryIdTag)
 	commodityGoodscategoryId = commodityGoodscategoryIdPartern.search(commodityGoodscategoryIdContent).group(1)
 	
-	# 100: lessons; 84: beauty salon; 42, 49, 50, 78, 96, 99: hotel; 89: flower shop; 104, 106: foot-club; 92: pets; 54: KTV； 61: internet cafe; 91: Tea Art; 107: Dancing Club;
-	# 108: photo studio, 86, 83: car repairing, 88: cigarette, 112: piano
-	if commodityGoodscategoryId in ['100', '84', '42', '49', '50', '78', '96', '99', '89', '104', '106', '92', '54', '61', '91', '107', '108', '86', '83', '88', '112']:
+	# Place the ids of the categories you are not interested in the [] below. Use '' to quote them.
+	if commodityGoodscategoryId in ['9999','9998']:
 		print( 'Not Interested')
 		return None
 
